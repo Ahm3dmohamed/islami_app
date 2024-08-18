@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islami/model/core/themes/ui_utils.dart';
 import 'package:islami/modules/splash/screens/custom_splash.dart';
 
 class RadioScreen extends StatelessWidget {
@@ -10,7 +11,7 @@ class RadioScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomSplash(
       child: Scaffold(
-   appBar: AppBar(title: const Text(" Radio"),),
+   appBar: AppBar(title:  Text(appTranslation(context).radioTab,),),
    body: Column(
     children: [
       Container(

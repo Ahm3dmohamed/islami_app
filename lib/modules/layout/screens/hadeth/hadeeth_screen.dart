@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:islami/model/core/themes/ui_utils.dart';
 import 'package:islami/modules/layout/screens/hadeth/hadeth_model.dart';
 import 'package:islami/modules/layout/screens/hadeth/hadeth_title.dart';
 
@@ -7,6 +8,7 @@ class HadethScreen extends StatefulWidget {
   HadethScreen({super.key});
 
   @override
+  
   State<HadethScreen> createState() => _HadethScreenState();
 }
 
@@ -25,7 +27,7 @@ class _HadethScreenState extends State<HadethScreen> {
     var theme = Theme.of(context);
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Islami",
+        title:  Text(appTranslation(context).hadeth,
           style: TextStyle(
         fontSize: 22,
         fontFamily: 'Qran'
