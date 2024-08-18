@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami/model/core/themes/app_theme.dart';
+import 'package:islami/model/core/themes/ui_utils.dart';
 import 'package:islami/modules/layout/screens/qran/sura_details.dart';
 import 'package:islami/modules/layout/screens/qran/sura_model.dart';
 import 'package:islami/modules/splash/screens/custom_splash.dart';
@@ -374,7 +375,7 @@ class _QuranScreenState extends State<QuranScreen> {
     return CustomSplash(
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Qran"),
+          title: Text(appTranslation(context).qranTitle),
         ),
         body: Column(
           children: [
@@ -382,13 +383,13 @@ class _QuranScreenState extends State<QuranScreen> {
             const Divider(
               color: Color(0xffB7935F),
             ),
-            const Padding(
-              padding: EdgeInsets.only(right: 2, left: 12),
+             Padding(
+              padding: EdgeInsets.only(right: 16, left: 16 ,top: 5,bottom: 5),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Sura Name",
+                  appTranslation(context).suraName,
                     style: TextStyle(fontSize: 18),
                   ),
                   Align(
@@ -406,8 +407,8 @@ class _QuranScreenState extends State<QuranScreen> {
                     ),
                   ),
                   Text(
-                    "Verses Number",
-                    style: TextStyle(fontSize: 16),
+              appTranslation(context).suraVerse,
+                    style: TextStyle(fontSize: 18),
                   ),
                 ],
               ),
@@ -427,7 +428,7 @@ class _QuranScreenState extends State<QuranScreen> {
                                 index: index));
                       },
                       child: Padding(
-                        padding: EdgeInsets.only(right: 44, left: 12),
+                        padding: EdgeInsets.only(right: 28, left: 18),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [

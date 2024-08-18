@@ -2,6 +2,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami/model/core/themes/app_theme.dart';
+import 'package:islami/model/core/themes/ui_utils.dart';
 import 'package:islami/modules/layout/home/ad33ya/after_prayer_adhkar.dart';
 import 'package:islami/modules/layout/home/ad33ya/morning_azkar.dart';
 import 'package:islami/modules/layout/home/ad33ya/do33a.dart';
@@ -53,7 +54,7 @@ class _AppHomeState extends State<AppHome> {
                 size: 44,
                 color: Color(0xffB7935F).withOpacity(.6),
               )),
-          title: const Text("Islami"),
+          title:  Text(appTranslation(context).appTitle),
         ),
         body: Column(
           children: [
@@ -100,7 +101,7 @@ class _AppHomeState extends State<AppHome> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(
-                            top: 12, left: 24, bottom: 12),
+                            top: 12, left: 24, bottom: 12,right: 24),
                         child: Row(
                           children: [
                             InkWell(
@@ -156,7 +157,6 @@ class _AppHomeState extends State<AppHome> {
                                   child: Text(
                                     textAlign: TextAlign.center,
                                     'أذكار المساء',
-                                  
                                   ),
                                 ),
                               ),
@@ -166,7 +166,7 @@ class _AppHomeState extends State<AppHome> {
                       ),
                       Padding(
                         padding: const EdgeInsets.only(
-                            top: 12, left: 24, bottom: 12),
+                            top: 12, left: 24, bottom: 12,right: 24),
                         child: Row(
                           children: [
                             InkWell(
@@ -189,7 +189,6 @@ class _AppHomeState extends State<AppHome> {
                                   child: Text(
                                     textAlign: TextAlign.center,
                                     'أذكار الإستيقاظ',
-                                    
                                   ),
                                 ),
                               ),
@@ -218,7 +217,6 @@ class _AppHomeState extends State<AppHome> {
                                   child: Text(
                                     textAlign: TextAlign.center,
                                     'أذكار النوم',
-                                    
                                   ),
                                 ),
                               ),
@@ -228,9 +226,9 @@ class _AppHomeState extends State<AppHome> {
                       ),
                       Padding(
                         padding: const EdgeInsets.only(
-                          top: 18,
-                          left: 26,
-                        ),
+                                                    top: 12, left: 24, bottom: 12,right: 24),
+
+                        
                         child: Row(
                           children: [
                             InkWell(
@@ -253,7 +251,6 @@ class _AppHomeState extends State<AppHome> {
                                   child: Text(
                                     textAlign: TextAlign.center,
                                     'أذكار بعد الصلاة',
-                                    
                                   ),
                                 ),
                               ),
@@ -280,11 +277,11 @@ class _AppHomeState extends State<AppHome> {
                                 ),
                                 child: Center(
                                   child: Text(
-                                    textAlign: TextAlign.center,
-                                    'أدعية مختارة',
-                                                                  style:Theme.of(context).textTheme.bodyMedium
-
-                                  ),
+                                      textAlign: TextAlign.center,
+                                      'أدعية مختارة',
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .bodyMedium),
                                 ),
                               ),
                             )
@@ -308,7 +305,6 @@ class _AppHomeState extends State<AppHome> {
       List<String> do33aLines = do33aFile.split('\n');
       setState(() {
         eachDo33a = do33aLines;
-        
       });
     } catch (e) {
       print("Error loading Doaa file: $e");

@@ -12,7 +12,8 @@ import 'package:islami/modules/layout/screens/app_home.dart';
 import 'package:islami/modules/layout/screens/qran/home_screen.dart';
 import 'package:islami/modules/layout/screens/layout_screen.dart';
 import 'package:islami/modules/layout/screens/settings.dart';
-
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -40,6 +41,12 @@ class MyApp extends StatelessWidget {
           AfterPrayerAdhkar.routeName: (context) => AfterPrayerAdhkar(),
           HadethDetails.routeName :(context)=> HadethDetails(),
           Settings.routeName : (context)=>Settings(),
-        });
+        },
+         localizationsDelegates: AppLocalizations.localizationsDelegates,
+  supportedLocales: AppLocalizations.supportedLocales,
+  locale: Locale('ar'),
+        );
+        
   }
+  
 }

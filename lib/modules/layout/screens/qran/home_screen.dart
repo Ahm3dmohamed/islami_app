@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami/model/core/themes/app_theme.dart';
+import 'package:islami/model/core/themes/ui_utils.dart';
 import 'package:islami/modules/layout/screens/app_home.dart';
 import 'package:islami/modules/layout/screens/hadeth/hadeeth_screen.dart';
 import 'package:islami/modules/layout/screens/qran/quran_screen.dart';
@@ -66,34 +67,34 @@ class _HomeScreenState extends State<HomeScreen> {
                 _pageController.jumpToPage(currentIndex);
               });
             },
-            items: const [
+            items:  [
               BottomNavigationBarItem(
-                icon: ImageIcon(
+                icon:const ImageIcon(
                   AssetImage("assets/icons/icon_quran.png"),
                   size: 34,
                 ),
-                label: "Quran",
+                label: appTranslation(context).qranTitle,
               ),
               BottomNavigationBarItem(
-                icon: ImageIcon(
+                icon:const ImageIcon(
                   AssetImage("assets/icons/icon_hadeth.png"),
                   size: 34,
                 ),
-                label: "Ahadeth",
+                label: appTranslation(context).hadeth,
               ),
               BottomNavigationBarItem(
-                icon: ImageIcon(
+                icon: const ImageIcon(
                   AssetImage("assets/icons/icon_sebha.png"),
                   size: 34,
                 ),
-                label: "Sebha",
+                label: appTranslation(context).tasbeehTab,
               ),
               BottomNavigationBarItem(
-                icon: ImageIcon(
+                icon: const ImageIcon(
                   AssetImage("assets/icons/icon_radio.png"),
                   size: 34,
                 ),
-                label: "Radio",
+                label: appTranslation(context).radioTab,
               ),
             ],
           ),

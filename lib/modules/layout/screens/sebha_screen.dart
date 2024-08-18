@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'dart:math'; 
+import 'dart:math';
+
+import 'package:islami/model/core/themes/ui_utils.dart'; 
 
 class SebhaScreen extends StatefulWidget {
   static const String routeName = "SebhaScreen";
@@ -54,7 +56,7 @@ class _SebhaScreenState extends State<SebhaScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(" Sebha"),
+        title:  Text(appTranslation(context).tasbeehTab),
       ),
       body: Padding(
             padding: const EdgeInsets.only(top: 12),
