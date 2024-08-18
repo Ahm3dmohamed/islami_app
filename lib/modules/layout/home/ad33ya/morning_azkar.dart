@@ -41,8 +41,6 @@ class _MorningAzkarState extends State<MorningAzkar> {
             : ListView.builder(
                 itemCount: adhkarEls33bah.length,
                 itemBuilder: (context, index) {
-                  print(adhkarEls33bah.length);
-
                   return GestureDetector(
                     onTap: () {
                       if (do33aCounters[index] > 0) {
@@ -59,7 +57,7 @@ class _MorningAzkarState extends State<MorningAzkar> {
                             color: index < do33aCounters.length &&
                                     do33aCounters[index] == 0
                                 ? Colors.blueGrey
-                                : Colors.white,
+                                : Color(0xffB7935F).withOpacity(.2),
                             margin: const EdgeInsets.symmetric(
                                 horizontal: 16, vertical: 8),
                             elevation: 4,

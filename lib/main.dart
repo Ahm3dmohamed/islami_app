@@ -11,6 +11,7 @@ import 'package:islami/modules/layout/home/ad33ya/estukaz_adhkar.dart';
 import 'package:islami/modules/layout/screens/app_home.dart';
 import 'package:islami/modules/layout/screens/qran/home_screen.dart';
 import 'package:islami/modules/layout/screens/layout_screen.dart';
+import 'package:islami/modules/layout/screens/settings.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         theme: AppTheme.lightTheme,
-        themeMode: ThemeMode.system,
+        themeMode: ThemeMode.light,
         darkTheme: AppTheme.darkTHeme,
         debugShowCheckedModeBanner: false,
         initialRoute: LayoutScreen.routeName,
@@ -38,6 +39,7 @@ class MyApp extends StatelessWidget {
           SleepAdhkar.routeName: (context) => SleepAdhkar(),
           AfterPrayerAdhkar.routeName: (context) => AfterPrayerAdhkar(),
           HadethDetails.routeName :(context)=> HadethDetails(),
+          Settings.routeName : (context)=>Settings(),
         });
   }
 }

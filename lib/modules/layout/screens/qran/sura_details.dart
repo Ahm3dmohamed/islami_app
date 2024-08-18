@@ -54,7 +54,7 @@ class _SuraDetailsState extends State<SuraDetails> {
       ),
       backgroundColor: Colors.transparent,
       body: Card(
-           color: Color(0x80B7935F),
+           color: Color(0x80B7935F).withOpacity(.1),
 
           margin: EdgeInsets.symmetric(vertical: 18, horizontal: 18),
           elevation: 2,
@@ -76,10 +76,7 @@ class _SuraDetailsState extends State<SuraDetails> {
                               textAlign: TextAlign.center,
                               textDirection: TextDirection.rtl,
                               '  ${verses[index]}${{index + 1}}',
-                              style: const TextStyle(
-                                fontSize: 24,
-                                fontFamily: 'Qran',
-                              ),
+                            style:Theme.of(context).textTheme.bodyMedium,
                             ),
                           ],
                         );

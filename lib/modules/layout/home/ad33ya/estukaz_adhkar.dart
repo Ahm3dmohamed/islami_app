@@ -46,7 +46,7 @@ class _EstukazAdhkarState extends State<EstukazAdhkar> {
                                 color: index < do33aCounters.length &&
                                         do33aCounters[index] == 0
                                     ? Colors.grey
-                                    : Colors.white,
+                                : Color(0xffB7935F).withOpacity(.1),
                                 margin: const EdgeInsets.symmetric(
                                     horizontal: 16, vertical: 8),
                                 elevation: 4,

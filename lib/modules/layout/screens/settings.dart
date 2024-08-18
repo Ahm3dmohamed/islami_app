@@ -8,8 +8,20 @@ class Settings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomSplash(
-        child: const Scaffold(
+        child:  Scaffold(
+          appBar:AppBar(
+            title: const Text("Settings",style: TextStyle(
+            ),),
+          ),
             backgroundColor: Colors.transparent,
+            body: Column(
+              children: [
+
+                Center(child: ElevatedButton(onPressed: (){}, child: Text('ThemeMode'))),
+                Center(child: ElevatedButton(onPressed: (){}, child: Text('Language')))
+
+              ],
+            ),
             ));
   }
 }

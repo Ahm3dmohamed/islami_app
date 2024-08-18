@@ -434,16 +434,13 @@ class _QuranScreenState extends State<QuranScreen> {
                             Text(
                               textAlign: TextAlign.center,
                               englishQuranSurahs[index],
-                              style: const TextStyle(
-                                fontSize: 22,
-                              ),
+                              style:Theme.of(context).textTheme.bodySmall
                             ),
                             Text(
                               textAlign: TextAlign.center,
                               AyaNumber[index],
-                              style: const TextStyle(
-                                fontSize: 22,
-                              ),
+                              style: Theme.of(context).textTheme.bodySmall
+
                             ),
                           ],
                         ),

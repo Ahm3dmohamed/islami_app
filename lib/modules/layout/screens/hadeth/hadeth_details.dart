@@ -1,64 +1,59 @@
-
 import 'package:flutter/material.dart';
+import 'package:islami/modules/layout/screens/hadeth/hadeth_model.dart';
 import 'package:islami/modules/splash/screens/custom_splash.dart';
 
-class HadethDetails extends StatelessWidget {
-  static const String routeName = "hadethDetails";
-  HadethDetails({super.key});
+class HadethDetails extends StatefulWidget {
+  static const String routeName = "HadethDetails";
 
-  String title = "";
-  String details = "";
+  const HadethDetails({super.key});
+
+  @override
+  State<HadethDetails> createState() => _HadethDetailsState();
+}
+
+class _HadethDetailsState extends State<HadethDetails> {
   @override
   Widget build(BuildContext context) {
-    String hadeth = ModalRoute.of(context)!.settings.arguments as String;
-    Size size = MediaQuery.of(context).size;
-    var theme = Theme.of(context);
-    getHeader(hadeth);
+    HadethModel hadeth =
+        ModalRoute.of(context)!.settings.arguments as HadethModel;
+
     return CustomSplash(
-      child: Scaffold(
-        appBar: AppBar(
-          title: const Text("Islami"),
-        ),
-        body: Center(
-          child: Container(
-            margin: EdgeInsets.only(
-                bottom: size.height * 0.2,
-                left: size.width * 0.05,
-                right: size.width * 0.05,
-                top: size.height * 0.1),
-            padding: const EdgeInsets.all(25),
-            decoration: BoxDecoration(
-                color: theme.primaryColor,
-                boxShadow:const [
-                  BoxShadow(
-                      color: Colors.black12, blurRadius: 4, spreadRadius: 3),
-                ],
-                borderRadius: BorderRadius.circular(25)),
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  Text(
-                    title,
-                    style: theme.textTheme.bodyLarge,
-                  ),
-                  Divider(),
-                  Text(
-                    details,
-                    style: theme.textTheme.bodyLarge,
-                    textAlign: TextAlign.center,
-                    textDirection: TextDirection.rtl,
-                  )
-                ],
-              ),
-            ),
-          ),
+        child: Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        title: Text(
+          hadeth.title,
+          style: TextStyle(fontSize: 24,fontWeight: FontWeight.w700),
         ),
       ),
-    );
-  }
-
-  getHeader(String hadeth) {
-    title = hadeth.split("\n")[0];
-    details = hadeth.split("\n")[1];
+      backgroundColor: Colors.transparent,
+      body: Card(
+          color: const Color.fromARGB(128, 121, 118, 115),
+          margin: const EdgeInsets.symmetric(vertical: 18, horizontal: 18),
+          elevation: 2,
+          shape: RoundedRectangleBorder(
+              side: const BorderSide(
+                color: Color(0xffB7935F),
+              ),
+              borderRadius: BorderRadius.circular(24)),
+          child: Column(
+            children: [
+              Expanded(
+                child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: SingleChildScrollView(
+                      child: Text(
+                        
+                        hadeth.content,
+                        textAlign: TextAlign.center,
+                        textDirection: TextDirection.rtl,
+                        style:
+                            const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                      ),
+                    )),
+              ),
+            ],
+          )),
+    ));
   }
 }

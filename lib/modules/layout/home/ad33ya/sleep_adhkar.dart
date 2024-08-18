@@ -61,7 +61,7 @@ class _SleepAdhkarState extends State<SleepAdhkar> {
                             color: index < do33aCounters.length &&
                                     do33aCounters[index] == 0
                                 ? Colors.blueGrey
-                                : Colors.white,
+                                : Color(0xffB7935F).withOpacity(.1),
                             margin: const EdgeInsets.symmetric(
                                 horizontal: 16, vertical: 8),
                             elevation: 4,

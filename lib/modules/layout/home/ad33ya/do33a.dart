@@ -55,7 +55,7 @@ class _Do33aDetailsState extends State<Do33aDetails> {
                             color: index < do33aCounters.length &&
                                     do33aCounters[index] == 0
                                 ? Colors.blueGrey
-                                : Colors.white,
+                                : Color(0xffB7935F).withOpacity(.1),
                             margin: const EdgeInsets.symmetric(
                                 horizontal: 16, vertical: 8),
                             elevation: 4,
@@ -78,10 +78,16 @@ class _Do33aDetailsState extends State<Do33aDetails> {
                                     thickness: 3,
                                   ),
                                   const SizedBox(height: 9),
-                                  Text(
-                                    'Count: ${index < do33aCounters.length ? do33aCounters[index] : 0}',
-                                    style: const TextStyle(
-                                        fontSize: 14, color: Colors.grey),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children: [
+                                      Text(
+                                        textDirection: TextDirection.rtl,
+                                        'مره: ${index < do33aCounters.length ? do33aCounters[index] : 0}',
+                                        style: const TextStyle(
+                                            fontSize: 14, color: Colors.grey),
+                                      ),
+                                    ],
                                   ),
                                 ],
                               ),
