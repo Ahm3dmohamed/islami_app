@@ -434,13 +434,13 @@ class _QuranScreenState extends State<QuranScreen> {
                           children: [
                             Text(
                               textAlign: TextAlign.center,
-                              englishQuranSurahs[index],
-                              style:Theme.of(context).textTheme.bodySmall
+                              arabicAuranSuras[index],
+                              style:Theme.of(context).textTheme.bodyMedium
                             ),
                             Text(
                               textAlign: TextAlign.center,
                               AyaNumber[index],
-                              style: Theme.of(context).textTheme.bodySmall
+                              style: Theme.of(context).textTheme.bodyMedium
 
                             ),
                           ],

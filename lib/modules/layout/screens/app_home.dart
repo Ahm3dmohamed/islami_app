@@ -8,7 +8,7 @@ import 'package:islami/modules/layout/home/ad33ya/morning_azkar.dart';
 import 'package:islami/modules/layout/home/ad33ya/do33a.dart';
 import 'package:islami/modules/layout/home/ad33ya/estukaz_adhkar.dart';
 import 'package:islami/modules/layout/home/ad33ya/night_adhkar.dart';
-import 'package:islami/modules/layout/screens/settings.dart';
+import 'package:islami/modules/layout/screens/settings/settings.dart';
 import '../home/ad33ya/sleep_adhkar.dart';
 
 class AppHome extends StatefulWidget {

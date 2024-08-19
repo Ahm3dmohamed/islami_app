@@ -27,13 +27,13 @@ class AppTheme {
           fontFamily: 'Qran'),
       bodySmall: TextStyle(
           color: Colors.black,
-          fontSize: 18,
+          fontSize: 19,
           fontWeight: FontWeight.w500,
           fontFamily: 'Qran'),
       bodyMedium: TextStyle(
           color: Colors.black,
-          fontSize: 20,
-          fontWeight: FontWeight.bold,
+          fontSize: 24,
+          fontWeight: FontWeight.w600,
           fontFamily: 'Qran'),
       bodyLarge: TextStyle(
           color: Colors.black,

@@ -11,7 +11,7 @@ import 'package:islami/modules/layout/home/ad33ya/estukaz_adhkar.dart';
 import 'package:islami/modules/layout/screens/app_home.dart';
 import 'package:islami/modules/layout/screens/qran/home_screen.dart';
 import 'package:islami/modules/layout/screens/layout_screen.dart';
-import 'package:islami/modules/layout/screens/settings.dart';
+import 'package:islami/modules/layout/screens/settings/settings.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 void main() {
