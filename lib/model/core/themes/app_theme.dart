@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 class AppTheme {
-  static final Color light = Colors.white;
-
+  static final  Color light = Colors.white;
   static final Color lightPrimary = Color(0xFFB7935F);
   static final Color darkPrimary = Color(0xFF14142E);
-  static final Color darkSecondery = Color(0xFFACC1D);
-  static const bool isDark = false;
+  static final Color darkSecondery = Color.fromARGB(15, 247, 201, 19);
+
+
   static ThemeData lightTheme = ThemeData(
-    textTheme: const TextTheme(
+      
+    textTheme:  const TextTheme(
       headlineSmall: TextStyle(
           fontSize: 24,
           color: Colors.black,
-          fontWeight: FontWeight.w500,
+          fontWeight: FontWeight.normal,
           fontFamily: 'Qran'),
       headlineMedium: TextStyle(
           fontSize: 30,
           color: Colors.black,
-          fontWeight: FontWeight.w700,
+          fontWeight: FontWeight.normal,
           fontFamily: 'Qran'),
       headlineLarge: TextStyle(
           color: Colors.black,
@@ -27,23 +27,26 @@ class AppTheme {
           fontFamily: 'Qran'),
       bodySmall: TextStyle(
           color: Colors.black,
-          fontSize: 18,
-          fontWeight: FontWeight.w500,
-          fontFamily: 'Qran'),
+          fontSize: 21,
+          fontWeight: FontWeight.normal,
+          // fontFamily: 'Qran'
+          ),
       bodyMedium: TextStyle(
           color: Colors.black,
-          fontSize: 20,
-          fontWeight: FontWeight.bold,
-          fontFamily: 'Qran'),
+          fontSize: 24,
+          fontWeight: FontWeight.normal,
+          // fontFamily: 'Qran'
+          ),
       bodyLarge: TextStyle(
           color: Colors.black,
           fontSize: 34,
           fontWeight: FontWeight.bold,
-          fontFamily: 'Qran'),
+          // fontFamily: 'Qran'
+          ),
     ),
     scaffoldBackgroundColor: Colors.transparent,
     fontFamily: GoogleFonts.elMessiri().fontFamily,
-    appBarTheme: const AppBarTheme(
+    appBarTheme:  const AppBarTheme(
       iconTheme: IconThemeData(color: Colors.black),
       backgroundColor: Colors.transparent,
       elevation: 0,
@@ -54,33 +57,60 @@ class AppTheme {
       ),
       centerTitle: true,
     ),
-    // colorScheme: ColorScheme.fromSeed(
-    //   seedColor: Color(0xffB7935F)),
-    cardTheme: const CardTheme(
+    
+    cardTheme:const  CardTheme(
       color: Colors.white,
       surfaceTintColor: null,
     ),
-    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+    bottomNavigationBarTheme:const  BottomNavigationBarThemeData(
       backgroundColor: Color(0xffB7935F),
       type: BottomNavigationBarType.fixed,
       selectedItemColor: Color(0xff242424),
       unselectedItemColor: Colors.white,
       showUnselectedLabels: false,
     ),
-  );
+      bottomSheetTheme:  BottomSheetThemeData(
+      backgroundColor: light,
+    ),
+  
 
+
+  colorScheme: ColorScheme.fromSeed(
+      seedColor: darkPrimary,
+      primary: darkPrimary,
+      onPrimary: Colors.white,
+      secondary: const Color(0xFFB7935F),
+      onSecondary: Colors.black,
+    ),
+
+
+  );
+  
+  
+  
+  
+  
+  
+  
   static ThemeData darkTHeme = ThemeData(
-    textTheme:  const TextTheme(
+
+    dialogTheme: DialogTheme(
+      backgroundColor: const Color(0xffB7935F).withOpacity(.2),
+    ),
+      bottomSheetTheme: BottomSheetThemeData(
+      backgroundColor: darkPrimary,
+    ),
+    textTheme:   const TextTheme(
       headlineSmall: TextStyle(
         fontSize: 24,
-        fontWeight: FontWeight.w500,
+        fontWeight: FontWeight.normal,
         fontFamily: 'Qran',
         color: Colors.white,
       ),
       headlineMedium: TextStyle(
           color: Colors.white,
           fontSize: 30,
-          fontWeight: FontWeight.w700,
+          fontWeight: FontWeight.normal,
           fontFamily: 'Qran'),
       headlineLarge: TextStyle(
           fontSize: 44,
@@ -90,18 +120,21 @@ class AppTheme {
       bodySmall: TextStyle(
           color: Colors.white,
           fontSize: 18,
-          fontWeight: FontWeight.w600,
-          fontFamily: 'Qran'),
+          fontWeight: FontWeight.normal,
+          // fontFamily: 'Qran'
+          ),
       bodyMedium: TextStyle(
           color: Colors.white,
           fontSize: 24,
-          fontWeight: FontWeight.w500,
-          fontFamily: 'Qran'),
+          fontWeight: FontWeight.normal,
+          // fontFamily: 'Qran'
+          ),
       bodyLarge: TextStyle(
           color: Colors.white,
           fontSize: 34,
           fontWeight: FontWeight.bold,
-          fontFamily: 'Qran'),
+          fontFamily: 'Qran'
+          ),
     ),
     cardTheme: CardTheme(
       color: darkPrimary,
@@ -121,13 +154,16 @@ class AppTheme {
       seedColor: darkPrimary,
       primary: darkPrimary,
       onPrimary: Colors.white,
-      secondary: darkSecondery,
+      secondary: lightPrimary,
       onSecondary: Colors.black,
     ),
+    bottomAppBarTheme: BottomAppBarTheme(
+      
+    ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      backgroundColor: darkPrimary,
+      backgroundColor: Color(0xFF14142E),
       type: BottomNavigationBarType.fixed,
-      selectedItemColor: lightPrimary,
+      selectedItemColor: Color(0xFFB7935F),
       elevation: 0,
       showSelectedLabels: true,
       unselectedItemColor: Colors.white,
