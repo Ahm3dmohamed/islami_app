@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ThemeProvider themeProvider = ThemeProvider.get(context);
-        LocaleProvider localeProvider = LocaleProvider.get(context);
+    LocaleProvider localeProvider = LocaleProvider.get(context);
 
     return MaterialApp(
       theme: AppTheme.lightTheme,
@@ -55,8 +55,7 @@ class MyApp extends StatelessWidget {
         AfterPrayerAdhkar.routeName: (context) => AfterPrayerAdhkar(),
         HadethDetails.routeName: (context) => HadethDetails(),
         Settings.routeName: (context) => Settings(),
-            InfinteSebha.routeName: (context) => InfinteSebha(),
-
+        InfinteSebha.routeName: (context) => InfinteSebha(),
       },
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
