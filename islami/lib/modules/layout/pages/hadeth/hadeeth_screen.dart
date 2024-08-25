@@ -4,14 +4,12 @@ import 'package:islami/model/core/themes/ui_utils.dart';
 import 'package:islami/modules/layout/pages/hadeth/hadeth_model.dart';
 import 'package:islami/modules/layout/pages/hadeth/hadeth_title.dart';
 import 'package:islami/modules/layout/pages/settings/settings.dart';
-
 class HadethScreen extends StatefulWidget {
-  HadethScreen({super.key});
+  const HadethScreen({super.key});
 
   @override
   State<HadethScreen> createState() => _HadethScreenState();
 }
-
 class _HadethScreenState extends State<HadethScreen> {
   List<HadethModel> allHadeth = [];
   @override

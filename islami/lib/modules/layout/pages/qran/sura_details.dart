@@ -50,9 +50,10 @@ class _SuraDetailsState extends State<SuraDetails> {
       ),
       backgroundColor: Colors.transparent,
       body: Card(
-          color: Color(0x80B7935F).withOpacity(.1),
+          color: Color(0x80B7935F).withOpacity(.2),
           margin: EdgeInsets.symmetric(vertical: 18, horizontal: 18),
-          elevation: 2,
+          elevation: 0,
+          
           shape: RoundedRectangleBorder(
               side: const BorderSide(
                 color: Color(0xffB7935F),
