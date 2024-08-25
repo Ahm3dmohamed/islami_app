@@ -42,6 +42,11 @@ dependencies:
   google_fonts: ^6.2.1
 # Quran Packages
   quran: ^1.2.9
+  # Audio Service
+  just_audio: ^0.9.33
+  audio_service: ^0.18.0
+
+
 # Localization
   flutter_localization: ^0.2.1
 #internationlization  
@@ -65,7 +70,11 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
   generate: true
-
+  # localizations:
+  #   arb-dir: lib/l10n
+  #   template-arb-file: app_en.arb
+  #   output-localization-file: app_localizations.dart
+  #   output-class: AppLocalizations
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -86,7 +95,8 @@ flutter:
     - assets/morrning_adhkar.txt
     - assets/night_adhkar.txt
     - assets/ahadeth.txt
-    
+    - assets/audio/al Nabaa.mp3
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
