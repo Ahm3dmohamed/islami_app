@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:islami/model/core/themes/ui_utils.dart';
 import 'package:islami/modules/layout/home/adhar_screens/after_prayer_adhkar.dart';
 import 'package:islami/modules/layout/home/adhar_screens/morning_azkar.dart';
-import 'package:islami/modules/layout/home/adhar_screens/do33a.dart';
+import 'package:islami/modules/layout/home/adhar_screens/doaa.dart';
 import 'package:islami/modules/layout/home/adhar_screens/estukaz_adhkar.dart';
 import 'package:islami/modules/layout/home/adhar_screens/night_adhkar.dart';
 import 'package:islami/modules/layout/pages/settings/settings.dart';
