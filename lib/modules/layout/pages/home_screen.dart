@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:islami/model/core/themes/ui_utils.dart';
 import 'package:islami/modules/layout/pages/app_home.dart';
 import 'package:islami/modules/layout/pages/hadeth/hadeeth_screen.dart';
-import 'package:islami/modules/layout/pages/qran/quran_screen.dart';
+import 'package:islami/modules/layout/pages/manager/qran/quran_screen.dart';
 import 'package:islami/modules/layout/pages/radio_screen.dart';
 import 'package:islami/modules/layout/pages/tasbeeh/sebha_screen.dart';
 import 'package:islami/modules/splash/screens/custom_splash.dart';
@@ -20,12 +20,11 @@ class _HomeScreenState extends State<HomeScreen> {
   final List<Widget> screens = [
     QuranScreen(),
     HadethScreen(),
-    AppHome(),      // the main screen
+    AppHome(), // the main screen
     SebhaScreen(),
     RadioScreen(),
   ];
-    int currentIndex = 2;                 // Default  AppHome (index 2)
-
+  int currentIndex = 2; // Default  AppHome (index 2)
 
   @override
   Widget build(BuildContext context) {
@@ -42,9 +41,8 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-              currentIndex = 2;               // Navigate to AppHome
+            currentIndex = 2; // Navigate to AppHome
             setState(() {
-            
               _pageController.jumpToPage(currentIndex);
             });
           },
@@ -90,11 +88,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   size: 34,
                 ),
                 label: appTranslation(context).hadeth,
-              ),  const BottomNavigationBarItem(
+              ),
+              const BottomNavigationBarItem(
                 label: "",
                 icon: SizedBox(),
-                ),
-              
+              ),
               BottomNavigationBarItem(
                 icon: const ImageIcon(
                   AssetImage("assets/icons/icon_sebha.png"),
@@ -116,10 +114,3 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-
-
-
-
-
-
-

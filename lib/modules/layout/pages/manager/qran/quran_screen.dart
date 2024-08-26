@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:islami/model/core/themes/ui_utils.dart';
-import 'package:islami/modules/layout/pages/qran/sura_details.dart';
-import 'package:islami/modules/layout/pages/qran/sura_model.dart';
+import 'package:islami/modules/layout/pages/manager/qran/sura_details.dart';
+import 'package:islami/modules/layout/pages/manager/qran/sura_model.dart';
 import 'package:islami/modules/layout/pages/settings/settings.dart';
 import 'package:islami/modules/splash/screens/custom_splash.dart';
 
@@ -367,7 +367,7 @@ class _QuranScreenState extends State<QuranScreen> {
     '6'
   ];
 
- String searchQuery = "";
+  String searchQuery = "";
   List<String> filteredSuras = [];
 
   @override
@@ -400,11 +400,12 @@ class _QuranScreenState extends State<QuranScreen> {
               color: const Color(0xffB7935F).withOpacity(.6),
             ),
           ),
-          title: Text(appTranslation(context).qranTitle,
-          style:   GoogleFonts.amiri(
-            fontSize: 28,
-            fontWeight: FontWeight.normal,
-          ),
+          title: Text(
+            appTranslation(context).qranTitle,
+            style: GoogleFonts.amiri(
+              fontSize: 28,
+              fontWeight: FontWeight.normal,
+            ),
           ),
           actions: [
             IconButton(
@@ -430,11 +431,13 @@ class _QuranScreenState extends State<QuranScreen> {
                   ),
                   const Align(
                     alignment: Alignment.bottomCenter,
-                    child: Icon(Icons.star_rate_sharp, color: Color(0xffB7935F)),
+                    child:
+                        Icon(Icons.star_rate_sharp, color: Color(0xffB7935F)),
                   ),
                   const Align(
                     alignment: Alignment.bottomCenter,
-                    child: Icon(Icons.star_rate_sharp, color: Color(0xffB7935F)),
+                    child:
+                        Icon(Icons.star_rate_sharp, color: Color(0xffB7935F)),
                   ),
                   Text(
                     appTranslation(context).suraVerse,
@@ -448,34 +451,37 @@ class _QuranScreenState extends State<QuranScreen> {
               child: ListView.separated(
                 itemCount: filteredSuras.length,
                 itemBuilder: (context, index) {
-                  int suraIndex = arabicAuranSuras.indexOf(filteredSuras[index]);
-                  return InkWell(
-                    onTap: () {
-                      Navigator.pushNamed(
-                        context,
-                        SuraDetails.routeName,
-                        arguments: SuraModel(suraName: filteredSuras[index], index: suraIndex),
-                      );
-                    },
-                    child: Padding(
-                      padding: const EdgeInsets.only(right: 28, left: 18),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
+                  int suraIndex =
+                      arabicAuranSuras.indexOf(filteredSuras[index]);
+                  return Padding(
+                    padding: const EdgeInsets.only(right: 28, left: 18),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        InkWell(
+                          onTap: () {
+                            Navigator.pushNamed(
+                              context,
+                              SuraDetails.routeName,
+                              arguments: SuraModel(
+                                  suraName: filteredSuras[index],
+                                  index: suraIndex),
+                            );
+                          },
+                          child: Text(
                             filteredSuras[index],
                             style: Theme.of(context).textTheme.bodySmall,
                           ),
-                          Text(
-                            AyaNumber[suraIndex],
-                            style: Theme.of(context).textTheme.bodySmall,
-                          ),
-                        ],
-                      ),
+                        ),
+                        Text(
+                          AyaNumber[suraIndex],
+                          style: Theme.of(context).textTheme.bodySmall,
+                        ),
+                      ],
                     ),
                   );
                 },
-               separatorBuilder: (BuildContext context, int index) {
+                separatorBuilder: (BuildContext context, int index) {
                   return const Row(
                     children: [
                       Expanded(
@@ -485,13 +491,15 @@ class _QuranScreenState extends State<QuranScreen> {
                       Expanded(
                         child: Align(
                           alignment: Alignment.center,
-                          child: Icon(Icons.star_rate_sharp, color: Color(0xffB7935F)),
+                          child: Icon(Icons.star_rate_sharp,
+                              color: Color(0xffB7935F)),
                         ),
                       ),
                       Expanded(
                         child: Align(
                           alignment: Alignment.center,
-                          child: Icon(Icons.star_rate_sharp, color: Color(0xffB7935F)),
+                          child: Icon(Icons.star_rate_sharp,
+                              color: Color(0xffB7935F)),
                         ),
                       ),
                       VerticalDivider(color: Color(0xffB7935F), width: 2),
@@ -515,30 +523,39 @@ class _QuranScreenState extends State<QuranScreen> {
       context: context,
       builder: (context) {
         return AlertDialog(
-
-          title: Text("Search",style: GoogleFonts.amiri(
-            fontSize: 18,
-            fontWeight: FontWeight.normal,
-          )),
-          content: TextField(
-            onChanged: (value) {
-              filterSuras(value);  // Filter the list based on the search query
-            },
-            decoration: InputDecoration(
-             counterStyle:  GoogleFonts.amiri(
-            fontSize: 18,
-            fontWeight: FontWeight.normal,
-          ),
-              hintText: "Enter Sura name",
-              hintStyle: Theme.of(context).textTheme.bodySmall,
- ),
+          title: Text("Search",
+              style: GoogleFonts.amiri(
+                fontSize: 18,
+                fontWeight: FontWeight.normal,
+              )),
+          content: Container(
+            child: TextField(
+              onChanged: (value) {
+                filterSuras(value);
+              },
+              style: GoogleFonts.elMessiri(
+                fontSize: 16,
+                fontWeight: FontWeight.normal,
+              ),
+              decoration: InputDecoration(
+                counterStyle: GoogleFonts.amiri(
+                  fontSize: 18,
+                  fontWeight: FontWeight.normal,
+                ),
+                hintText: "Enter Sura name",
+                hintStyle: GoogleFonts.elMessiri(
+                  fontSize: 16,
+                  fontWeight: FontWeight.normal,
+                ),
+              ),
+            ),
           ),
           actions: [
             TextButton(
               onPressed: () {
                 Navigator.of(context).pop();
               },
-              child: Text("Close"),
+              child: const Text("Close"),
             ),
           ],
         );

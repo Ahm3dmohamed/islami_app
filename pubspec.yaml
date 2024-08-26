@@ -46,6 +46,7 @@ dependencies:
   just_audio: ^0.9.33
   audio_service: ^0.18.0
 
+  flutter_local_notifications: ^17.2.2
 
 # Localization
   flutter_localization: ^0.2.1
@@ -110,12 +111,13 @@ flutter:
   fonts:
     - family: Qran
       fonts:
-        - asset: assets/fonts/QuranSurah_colored.ttf
-        - asset: assets/fonts/AyatQuran7-8OMy0.ttf
+        - asset: assets\fonts\AyatNumber.ttf
+        # - asset: assets/fonts/AyatQuran7-8OMy0.ttf
   #         style: italic
-    # - family: Sura
-    #   fonts:
-    #     - asset: assets/fonts/ayat-quran-1/
+    - family: aya
+      fonts:
+        - asset: assets\fonts\aya_font.ttf
+
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
